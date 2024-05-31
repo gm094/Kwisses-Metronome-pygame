@@ -1,7 +1,10 @@
 # Metronome - Johnathon Kwisses (Kwistech)
-from tkinter import *
-from winsound import Beep
+#pygame support added by Gunnar M (gm094)
 
+from tkinter import *
+import pygame
+
+pygame.init()
 
 class Metronome:
     """Create Metronome app with class instance."""
@@ -101,12 +104,15 @@ class Metronome:
             self.var.set(self.count)
 
             if self.count == 1:
-                Beep(880, 100)
+                pygame.mixer.music.load("ding.ogg")
+                pygame.mixer.music.play()
             elif self.count >= self.beat:
                 self.count = 0
-                Beep(440, 100)
+                pygame.mixer.music.load("ding.ogg")
+                pygame.mixer.music.play()
             else:
-                Beep(440, 100)
+                pygame.mixer.music.load("ding.ogg")
+                pygame.mixer.music.play()
 
             # Calls this method after a certain amount of time (self.time).
             self.root.after(self.time, lambda: self.counter(spinbox))
