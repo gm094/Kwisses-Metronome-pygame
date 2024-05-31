@@ -1,6 +1,6 @@
 Based on Kwiss's metronome. Exactly the same other than winsound being replaced by pygame. See original docs below
 
-
+pygame and tkinter are required for this to run
 
 # Metronome
 
