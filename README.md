@@ -1,3 +1,7 @@
+Based on Kwiss's metronome. Exactly the same other than winsound being replaced by pygame. See original docs below
+
+
+
 # Metronome
 
 Metronome v.1.0.0 (Python 3.5)
