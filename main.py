@@ -96,9 +96,9 @@ class Metronome:
             self.beat = int(spinbox.get()[0])
 
             if self.beat == 6:  # 6/8 time
-                self.time = int((60 / (self.bpm / .5) - 0.1) * 1000)
+                self.time = int((60 / (self.bpm / .5)) * 1000)
             else:
-                self.time = int((60 / self.bpm - 0.1) * 1000)  # Math for delay
+                self.time = int(60 / self.bpm * 1000)  # Math for delay
 
             self.count += 1
             self.var.set(self.count)
