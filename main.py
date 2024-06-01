@@ -84,7 +84,9 @@ class Metronome:
 
     def stop_counter(self):
         """Stop counter by setting self.start to False."""
+        self.count = 0
         self.start = False
+        self.var.set(self.count)
 
     def counter(self, spinbox):
         """Control counter display and audio with calculated time delay.
